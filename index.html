@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>MongoDB</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<code>&lt;<span style="color: #a6e229;">Hello</span> <span style="color: #ec2672">World</span>/&gt;</code>
+				</section>
+				<section>
+					<p class="r-fit-text">MongoDB</p>
+				</section>
+				<section>
+					<p class="r-fit-text">What is MongoDB?</p>
+				</section>
+				<section>
+					<p class="r-fit-text">Let's drop deeper!</p>
+				</section>
+				<section>
+					<section>
+						<img src="./assets/3-3.jpg" alt="dinos" style="width: 700px;">
+					</section>
+					<section id="fragments">
+						<p style="font-size: 60px; font-weight: 600;">Relational database</p>
+						<img src="./assets/4.png" alt="Relational database" style="width: 700px;">
+						<div class="fragment">
+							<p>RDBMS</p>
+							<p>SQL</p>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section>
+						<img src="./assets/5-5.jpg" alt="mongodb and mysql" style="width: 1000px;">
+					</section>
+					<section>
+						<img src="./assets/6-6.jpg" alt="pice">
+					</section>
+				</section>
+				<section data-auto-animate>
+					<h2 data-id="code-title">Data Format</h2>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers style="max-height: 480px;">
+						{ "user": [
+												{
+													"firstName": "Den",
+													"lastName": "Karazan",
+													"joined": {
+															"month": "Jule",
+															"day": 22
+													}
+												},
+												{
+													"firstName": "John",
+													"lastName": "Doe",
+													"joined": {
+															"month": "April",
+															"day": 12
+													}
+												}
+						]}
+					</code>
+					<p style="font-size: 26px; text-align: center;">JSON – JavaScript Object Notation</p>
+				</pre>
+					<p class="fragment" style="font-size: 26px;">BSON or Binary JSON</p>
+				</section>
+				<section>
+					<p style="font-size: 60px;">Documents instead of strings</p>
+					<img src="./assets/10.png" alt="document" style="width: 700px;">
+				</section>
+				<section>
+					<img src="./assets/10-10.png" alt="document" style="width: 700px;">
+				</section>
+				<section>
+					<img src="./assets/9-9-9.jpg" alt="bender and simson" style="width: 800px;">
+					<p class="fragment">Primary Key</p>
+					<p class="fragment">_id</p>
+				</section>
+				<section>
+					<p style="font-size: 60px;">Document ID</p>
+					<img src="./assets/13.jpg" alt="id" style="width: 700px;">
+				</section>
+				<section>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						{
+							"name": "John",
+							"lastname": "Doe",
+							"age": "22",
+							"company": {
+									"name" : "lipam",
+									"year" : "2012",
+									"price" : "40000"
+									}
+						}					
+					</code></pre>
+				</section>
+				<section>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						{
+							"name": "Tom",
+							"birthday": "1985.06.28",
+							"place" : "Berlin",
+							"languages" :[
+									"english",
+									"german",
+									"spanish"
+							]
+						}
+					</code></pre>
+				</section>
+				<section>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						{"age" : "28"}
+						{"age" : 28}
+					</code></pre>
+				</section>
+				<section>
+					<p class="r-fit-text">The end</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
